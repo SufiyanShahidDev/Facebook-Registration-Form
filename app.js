@@ -48,14 +48,14 @@ const signupHandler = () => {
         return;
     };
 
-    let regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!regex.test(email.value.trim())) {
+    let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(email.value.trim())) {
         sweetAlert("error", "Something Went Wrong", "Please Enter a valid email")
         return;
     };
 
-    let strongPassword = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
-    if (!strongPassword.test(password.value)) {
+    let passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*]).{8,}$/;
+    if (!passwordRegex.test(password.value)) {
         sweetAlert("error", "Weak Password", "Password must contain uppercase, number & special character");
         return;
     };
