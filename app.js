@@ -91,7 +91,6 @@ const signupHandler = () => {
 
     localStorage.setItem("users", JSON.stringify(userDataArr));
 
-    // sweetAlert("success", "Signup Successfully", "Congratulations");
     sweetAlert("success", "Signup Successfully", "Congratulations")
 
     firstName.value = "";
